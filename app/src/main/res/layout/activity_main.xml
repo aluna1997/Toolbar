@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@android:color/white"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <!--Con include llamamos el toolbaar en cada actividad-->
+    <include android:id="@+id/toolbar"
+             layout="@layout/toolbar"/>
+
+    <!--Contenedor de las secciones-->
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabLayout"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:elevation="4dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true" />
+
+    <!--Slider de las secciones-->
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPager"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+
+
+</RelativeLayout>
